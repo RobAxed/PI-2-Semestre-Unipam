@@ -41,6 +41,7 @@ section > main.cardapio > div.filtros > ul > li {
   cursor: pointer;
   padding: 15px 40px;
   background-color: #5b8e48;
+  color: #fff;
 }
 
 section > main.cardapio > div.filtros > ul > li:hover {
