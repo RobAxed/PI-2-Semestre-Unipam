@@ -1,0 +1,131 @@
+
+ul.menu {
+  display: flex;
+  justify-content: center;
+}
+
+ul.menu > li {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+main.cardapio {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+main.cardapio > div.titulo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} 
+
+main.cardapio > div.titulo > h1 {
+  margin-bottom: auto;
+}
+
+main.cardapio > div.titulo > p {
+  margin-top: auto;
+}
+
+main.cardapio > div.filtros > ul {
+  -moz-user-select: element;
+}
+
+main.cardapio > div.filtros > ul > li {
+  border-bottom: 1px #FFFFFF00 solid;
+  cursor: pointer;
+}
+
+main.cardapio > div.filtros > ul > li:hover {
+  border-bottom: 1px #FFF solid;
+  opacity: .7;
+  transition: all .4s;
+}
+
+main.cardapio > div.filtros > ul > li::selection { background: transparent; }
+main.cardapio > div.filtros > ul > li::-moz-selection { background: transparent; }
+
+/*ESTÉTICA DO BACKGROUND DO CARDÁPIO*/
+main.cardapio > div.itens {
+  background-color: #222222b9;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 5px;
+  padding: 24px 26px;
+  width: 90%;
+}
+
+
+
+/*ESTÉTICA DO CARD*/
+main.cardapio > div.itens > div.produto {
+  align-items: center;
+  background-color: rgb(235, 235, 235);
+  border: 3px #ffae00 solid;
+  display: flex;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 15px 15px;
+  width: 350px;
+}
+
+main.cardapio > div.itens > div.produto.hidden {
+  height: 0px;
+  width: 0px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+main.cardapio > div.itens > div.produto.hidden > img {
+  max-height: 0px;
+  max-width: 0;
+}
+
+main.cardapio > div.itens > div.produto > div.info {
+  align-items: flex-start;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+main.cardapio > div.itens > div.produto > div.info {
+  color: #414141;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main.cardapio > div.itens > div.produto > div.info > div.detalhes > h3 {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+main.cardapio > div.itens > div.produto > div.info > div.detalhes > p {
+  padding: initial;
+  margin-top: auto;
+} 
+/*ALINHAMENTO DO PREÇO NO CARD*/
+main.cardapio > div.itens > div.produto > div.info > div.preco {
+  align-self: flex-end;
+  display: flex;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 20px;
+} 
+
+main.cardapio > div.itens > div.produto > img {
+  border-radius: 50%;
+  max-height: 90px;
+  margin-right: 15px;
+}

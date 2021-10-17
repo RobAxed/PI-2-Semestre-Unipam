@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "GilroyMedium";
+    src: url(/font/Gilroy-Medium.ttf);
+}
+@font-face {
+    font-family: "GilroySemiBold";
+    src: url(/font/Gilroy-SemiBold.ttf);
+}
+@font-face {
+    font-family: "RobotoMedium";
+    src: url(/font/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: "SugiyamaRegular";
+    src: url(/font/DrSugiyama-Regular.ttf);
+}
+
+
+/*----------------header*/
+/**global*/
+header{
+    width: 100%; /*largura geral*/
+    display: flex;
+}
+.header-left{
+    width: 60%; /* 60% da largura geral*/
+    background-color: #ecdab3;
+    padding: 3% 0 6%;
+}
+.header-right{
+    width: 40%; /* 40% da largura geral*/
+    background-color: #633f34;
+    padding: 3% 0 6%;
+}
+/**fim global*/
+
+/**********header left*********/
+/*menu parte esquerda*/
+.menu-left{
+    display: flex; 
+    justify-content: space-evenly; /*cria separação entre os textos do menu*/
+    font-size: 10px; /* define de forma geral o tamanho da fonte dentro do menu*/
+}
+.menu-left a img{
+    width: 100%;
+}
+.menu-left  a h1{
+    font-family: "GilroySemiBold"; /*fonte do menu*/
+    color: #c22a22; /*cor do menu*/
+    transition: 0.2s;
+}
+.menu-left  a h1:hover{
+    transition: 0.2s;
+    color: #633f34 /*cor do menu*/
+}
+/*fim menu parte esquerda*/
+/*conteúdo da header left*/
+.menu-content{
+    display: flex;
+    width: 100%; /* conteudo geral*/
+    align-items: center; /*alinha todos os elementos ao meio*/
+    margin: 10% 30% 0;
+}
+.menu-text{
+    width: 50%; /* 50% do conteudo geral*/
+    color: #633f34; /*define todas as cores que estão dentro dessa classe*/
+}
+.menu-text h1{
+   font-family: "SugiyamaRegular"; 
+   color: #c22a22 ;
+   font-size: 90px; /*texto principal*/
+}
+.menu-text h2{
+    font-family: "GilroySemiBold";
+ }
+ .menu-text p{
+    font-family: "GilroyMedium";
+ }
+ .menu-text a button{
+    font-family: "GilroySemiBold";
+    border-radius: 20px;
+    padding: 1% 17%;
+    font-size:20px;
+    color: #c22a22;
+    border: 3px solid #c22a22;
+    background-color: transparent;
+    transition: 0.2s;
+    cursor:pointer;
+    margin: 3% 0;
+ }
+ .menu-text a button:hover{
+    transition: 0.2s;
+    color: #ecdab3;
+    border: 3px solid #c22a22;
+    background-color: #c22a22;
+ }
+ /*=====*/
+.menu-image{
+    width: 50%; /* 50% do menu-content geral*/
+}
+.menu-image img{
+    width: 120%; /* controla o tamanho da imagem banner*/
+    position: relative;
+    z-index: 1; /*deixa a imagem sobreposta sobre outro elemento*/
+}
+/*fim conteúdo da header left*/
+/********fim  header left********/
+
+/******header right******/
+.menu-right{
+    display: flex;
+    color: #ecdab3; /*define a cor geral*/
+    align-items: center;
+    padding-left: 5%;
+}
+.menu-right a img{
+    margin: 0 8px;
+   
+}
+#fb{
+    width: 38%;
+}
+#ig{
+    width: 50%;
+}
+/******fim header right*****/
+
+/*--------------fim header*/
+
+/*slide-promo*/
+.slide-geral{
+    width: 100%;
+    height: auto;
+}
+.slide-promo{
+    width: 100%;
+    background-color:#fcfcfc;
+    display: flex;
+    padding: 4% 0;
+    height: 20vh;
+}
+.slide-left{
+    width: 40%;
+}
+.slide-bg{
+    background-color: #5b8e48;
+    width: 60%;
+    padding: 1% 0% 0% 3%;
+}
+.slide-bg h1{
+   color: white;
+   font-family: "GilroySemiBold";
+   text-align: left;
+   font-size: 40px;
+}
+.slide-bg p{
+    color: white;
+    font-family: "GilroyMedium";
+    text-align: left;
+    font-size: 22px;
+ }
+
+/*fim slide-promo*/
+
+/*container icon*/
+.container-icon{
+    width: 100%;
+    background-color: #5b8e48;
+    display: flex;
+    flex-direction: column; /*separa todos as divs uma embaixo da outra*/
+    align-items: center; /*alinha o conteudo ao centro*/
+    padding: 4% 0;
+}
+.container-icon h1{
+    font-family: "GilroySemiBold";
+    color: #ecdab3;
+    font-size: 40px;
+}
+.container-icon p{
+    font-family: "GilroyMedium";
+    color: #ecdab3;
+    font-size: 22px;
+    
+}
+
+.container-row{
+    display: flex;
+    flex-direction: row;/*alinha os elementos em uma única linha*/
+    padding: 3% 10%;
+}
+.icon-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.icon-box img{
+    width: 25%;
+}
+/*fim container icon*/
+
+/*avaliadores*/
+.testimonials{
+    padding: 4% 0;
+    width: 100%;
+    background-color:#fcfcfc;
+    
+}
+
+.testimonials h1{
+    color: #633f34;
+    font-size: 40px;
+    text-align: center;
+    font-family: "GilroySemiBold";
+}
+.testimonials-row{
+    display: flex;
+    flex-direction: row;
+
+}
+.testimonials-box{
+    background-color: #5b8e48;
+    transition: 0.4s;
+    width: 25%;
+    height: auto;
+    margin: 2%;
+    padding-bottom: 4%;
+    
+}
+.testimonials-box:hover{
+    transition: 0.4s;
+    transform: scale(1.1); /* Equal to scaleX(0.7) scaleY(0.7) */
+}
+.testimonials-box img{ 
+   width: 100%;
+}
+.testimonials-text{
+    width: 80%;
+    margin: 0 auto;
+    color: #ecdab3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    text-align: center;
+}
+.testimonials-text img{
+    width: 20%;
+    margin: 2% 0;
+}
+.testimonials-text h1{
+    font-family: "GilroySemiBold";
+}
+.testimonials-text p{
+    font-family: "GilroyMedium";
+}
+/*avaliadores*/
+/*galeria*/
+/*geral*/
+.gallery{
+    margin-top: 5%;
+    width:100%;
+    display: flex;
+    background-color: #633f34;
+    flex-direction: column;
+    padding: 3% 0;
+}
+.gallery h1{
+    text-align: center;
+    color: #ecdab3;
+    font-size: 40px;
+    font-family: "GilroySemiBold";
+}
+.gallery p{
+    text-align: center;
+    color: #ecdab3;
+    font-size: 22px;
+    font-family: "GilroyMedium";
+}
+.gallery-row{
+    width:70%;
+    margin: 0 auto;
+    display: flex; 
+}
+.gallery-left{
+    width: 40%;
+}
+.gallery-left img{
+    width: 120%;
+    height: 99%;
+}
+/*fim geral*/
+
+.gallery-right{
+    width: 60%;
+    display: flex;
+}
+.gallery-right-up{
+    width: 100%;
+}
+.gallery-right-up img{
+    width: 100%;
+}
+.gallery-right-down{
+    width: 100%;
+}
+.gallery-right-down img{
+    width: 100%;
+}
+/*fim galeria*/
+/*slide-compra*/
+
+.slide-purchase{
+    width: 100%;
+    padding: 3% 0 4%;
+    background-color: #633f34;
+}
+.slide-purchase h1{
+    text-align: center;
+    color: #ecdab3;
+    font-family: "GilroySemiBold"; 
+    font-size: 40px;
+}
+.carousel {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+.carousel-box{
+    border: 2px solid #633f34;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 1%;
+}
+.carousel-box img{
+   width:100%;
+}
+.carousel-text{
+    text-align: center;
+}
+.carousel-text h1{
+    font-family: "GilroySemiBold";  
+}
+.carousel-text h2{
+    font-family: "GilroyMedium";  
+    color: #ecdab3;
+}
+.carousel-text a button{
+    font-family: "GilroySemiBold";
+    border-radius: 20px;
+    padding: 1% 17%;
+    font-size:20px;
+    color: #ecdab3;
+    border: 3px solid #ecdab3;
+    background-color: transparent;
+    transition: 0.2s;
+    cursor:pointer;
+    margin: 3% 0;
+ }
+ .carousel-text a button:hover{
+    transition: 0.2s;
+    color: #633f34;
+    border: 3px solid #ecdab3;
+    background-color: #ecdab3;
+ }
+.carousel-price{
+    display: flex; /*deixa o preço ao lado*/
+    justify-content: center; /*centraliza*/
+}
+
+.carousel-price h1{
+    font-family: "GilroySemiBold";
+    text-decoration: line-through;
+    color: gray;
+    font-size: 19px;
+}
+.carousel-price h2{
+    font-family: "GilroySemiBold";
+    color: #ecdab3;
+}
+/*fim slide-compra*/
+/*rodape*/
+footer{
+    padding: 3% 10% 0;
+    background-color: #ddcaa6;
+    display: flex;
+    
+    flex-direction: column;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between; /*separa os elementos nas extremidades*/
+    padding: 0 12%;
+    padding: 11px 12% 0;
+    height: 20vh;
+}
+.footer-logo{
+
+}
+.footer-social{
+    display: flex;
+    width: 100%;
+    width: 4%;
+}
+.hr-b{
+    background-color: #633f34;
+    height: 3px;
+    width: 80%;
+    margin: 0 auto;
+
+}
+.footer-social img{
+    height: 12%;
+    margin-right: 15px;
+}
+/*fim rodape*/
