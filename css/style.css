@@ -47,6 +47,10 @@ header{
     justify-content: space-evenly; /*cria separação entre os textos do menu*/
     font-size: 10px; /* define de forma geral o tamanho da fonte dentro do menu*/
 }
+
+.menu-left > a {
+    height: fit-content;
+}
 .menu-left a img{
     width: 100%;
 }
