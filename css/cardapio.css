@@ -39,10 +39,12 @@ section > main.cardapio > div.filtros > ul {
 section > main.cardapio > div.filtros > ul > li {
   border-bottom: 1px #FFFFFF00 solid;
   cursor: pointer;
+  padding: 15px 40px;
+  background-color: #5b8e48;
 }
 
 section > main.cardapio > div.filtros > ul > li:hover {
-  border-bottom: 1px #FFF solid;
+  /*border-bottom: 1px #FFF solid;*/
   opacity: .7;
   transition: all .4s;
 }
