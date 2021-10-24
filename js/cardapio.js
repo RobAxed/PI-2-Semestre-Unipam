@@ -1,5 +1,3 @@
-const _window = window;
-
 window.addEventListener('DOMContentLoaded', function() {
     
     const SELECTED_CLASSNAME = 'selected'
