@@ -1,16 +1,112 @@
 window.addEventListener('DOMContentLoaded', function() {
-
-    const filtros = document.querySelectorAll(".filtros > ul > li")
     
+    const SELECTED_CLASSNAME = 'selected'
+
+    const filtros = document.querySelectorAll(".filtros > ul > li");
+    const produtos = document.querySelectorAll(".produto");
+    const enviapedido = document.querySelector(".enviapedido")
+    
+    let enviando = false;
+    
+    
+    // FUNÇÔES QUE ADICIONAM EVENTOS
     /**
      * 
      * @param {NodeList} lista 
      */
-    function adicionaEventosNaLista( lista ){
+    function adicionaEventoFiltro( lista ){
         lista.forEach( function(node) {
-            
             node.addEventListener("click", mudaFiltro )
         })
+    }
+    
+    /**
+     * 
+     * @param {}  
+     */
+    function adicionaEventoPedido(){
+        produtos.forEach( function(produto) {
+            produto.addEventListener("click", selecionaItem )
+        });
+    }
+    
+    function adicionaEventoEnvioPedido(){
+        
+        enviapedido.addEventListener("click", function(event){
+            
+            if ( enviando === false ){
+                //enviando = true
+                
+                const produtosSelecionados = document.querySelectorAll("."+SELECTED_CLASSNAME)
+                
+                if ( produtosSelecionados.length === 0 ){
+                    alert("Nenhum produto selecionado.")
+                    return;
+                }
+                
+                pedido = { 
+                    items: [],
+                    total: 0
+                }
+                
+                // para cada item selecionado ele coloca dentro do objeto
+                produtosSelecionados.forEach( function( item ){
+                    
+                    const nome = item.attributes.nome.value;
+                    const valor = parseFloat(item.attributes.preco.value);
+                    
+                    const produto = { nome, valor };
+                    pedido.items.push(produto);
+                    pedido.total = pedido.total + valor
+
+                })
+                
+                const texto = serialize(pedido)
+                // Colocou na sessão o pedido serializado
+                sessionStorage.setItem("pedido", texto)
+                
+                alert("Pedido feito com sucesso!")
+                window.location.href = "pedido.html";
+            }
+            
+        })
+        
+    }
+    
+    
+    //FUNÇÕES DE AÇÃO
+    
+    
+    /**
+     * 
+     * @param {Event} event 
+     */
+    function selecionaItem( event ){
+        
+        getParentNode(event.path, function( item ){
+            if ( item.classList !=  null ){
+                if (  !item.classList.contains(SELECTED_CLASSNAME))
+                    item.classList.add(SELECTED_CLASSNAME)
+                else 
+                    item.classList.remove(SELECTED_CLASSNAME)
+            }
+        });
+    }
+    
+    
+    
+    /**
+     * 
+     * @param {Array} path 
+     */
+    function getParentNode( path, callback  ){
+        path.forEach(function( parent ){
+            if ( parent.classList != null 
+                && parent.classList.contains("produto")){
+                callback( parent )
+            }
+            
+        });
     }
     
     /**
@@ -77,5 +173,7 @@ window.addEventListener('DOMContentLoaded', function() {
         })
     }
     
-    adicionaEventosNaLista(filtros)
+    adicionaEventoFiltro(filtros)
+    adicionaEventoPedido()
+    adicionaEventoEnvioPedido()
 });
