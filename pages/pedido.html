@@ -5,15 +5,21 @@
     <meta name="description" content="Pizzaria Impero" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
     <title>Impero Della Pizza</title>
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Langar&family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet" />
     <link href="../css/style.css" rel="stylesheet" />
     <link href="../css/global.css" rel="stylesheet" />
-    <link href="../css/cardapio.css" rel="stylesheet" />
+    <link href="../css/pedido.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../js/app.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/pedido.js"></script>
 </head>
 <body>
     <!--cabeçalho-->
@@ -24,7 +30,7 @@
             <div class="menu-left">
                 <a href=""><img src="../img/icons/logo.png"></a>
                 <a href="../"><h1>Home</h1></a>
-                <a href=""><h1>Cardápio</h1></a>
+                <a href="./cardapio.html"><h1>Cardápio</h1></a>
                 <a href=""><h1>Pedido</h1></a>
                 <a href=""><h1>Institucional</h1></a>
             </div>
@@ -48,8 +54,42 @@
     </header>
     
     
-    <!-- -->
-
+    <section>
+        <main class="pedido">
+            <form onsubmit="event.preventDefault();" method="post">
+                
+                <h1 class="titulo">
+                    Dados de entrega
+                </h1>
+                
+                <div class="input">
+                    <label for="nome">Nome:</label><input name="nome" type="text" placeholder="Digite seu nome">
+                </div>
+                
+                <div class="input">
+                    <label for="endereco">Endereço:</label><input name="endereco" type="text" placeholder="Digite seu endereço">
+                </div>
+                
+                <div class="input">
+                    <label for="telefone">Telefone:</label><input name="telefone" type="text" placeholder="Digite seu número">
+                </div>
+                
+                <div class="pagamento">
+                    <p>Forma de pagamento:</p>
+                    <div class="tipos">
+                        <input type="radio" name="tipo" value="Dinheiro" checked="checked"><label for="tipo">Dinheiro</label>
+                        <input type="radio" name="tipo" value="Cartão"><label for="tipo">Cartão</label>
+                        <input type="radio" name="tipo" value="PIX"><label for="tipo">PIX</label>
+                    </div>
+                </div>
+                
+                <div class="submit">
+                    <input type="submit" value="Fazer pedido!">
+                </div>
+                
+            </form>
+        </main>
+    </section>
 
 
     <footer>
@@ -71,9 +111,9 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
-    <script type="text/javascript" src="./lib/slide.js"></script>
-    <script type="text/javascript" src="./lib/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="./lib/parallax.js"></script>
+    <script type="text/javascript" src="../lib/slide.js"></script>
+    <script type="text/javascript" src="../lib/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="../lib/parallax.js"></script>
     
 </body>
 </html>
