@@ -1,0 +1,163 @@
+
+.header-left{
+  width: 60%;
+  background-color: #ecdab3;
+  padding: 3% 0 6%;
+}
+
+.header-right{
+  width: 40%; /* 40% da largura geral*/
+  background-color: #633f34;
+  padding: 3% 0 6%;
+}
+
+#topo a{
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+/*menu parte esquerda*/
+.menu-left{
+  display: flex; 
+  justify-content: space-evenly; /*cria separação entre os textos do menu*/
+  font-size: 10px; /* define de forma geral o tamanho da fonte dentro do menu*/
+}
+.menu-left img{
+  width: 30px;
+}
+.menu-left{
+  display: flex; 
+  justify-content: space-evenly; /*cria separação entre os textos do menu*/
+  font-size: 10px; /* define de forma geral o tamanho da fonte dentro do menu*/
+}
+.menu-left a{
+  text-decoration: none;
+}
+.menu-left > a {
+  height: fit-content;
+}
+
+.menu-left  a h1{
+  font-family: "GilroySemiBold"; /*fonte do menu*/
+  color: #c22a22; /*cor do menu*/
+  transition: 0.2s;
+}
+.menu-left  a h1:hover{
+  transition: 0.2s;
+  color: #633f34 /*cor do menu*/
+}
+
+
+
+ul {
+  display: inline;
+  list-style: none;
+}
+ul li {
+  display: inline-block;
+  padding: 30px;
+  font-size: 20px;
+}
+
+.fale h1{
+    font-size: 30px;
+    letter-spacing: 5px;
+    padding: 5px;
+    color: #633f34;
+    text-align: center;
+    margin-top: 60px;
+    clear: both;
+}
+  
+  #conteudo-contato{
+    color:black;
+    clear: both;
+  
+}
+  
+  
+.form{
+
+    margin: 100px;
+    width: 50%;
+    font-size: 20px;
+    float: left;
+}
+  
+.form a{
+    text-decoration: none;
+}
+  
+label{
+    padding: 10px, 0px;
+    
+}
+  
+input{
+    width:500px ;
+    height: 30px;
+    font-size: 18px;
+    padding: 5px;
+}
+  
+textarea{
+    width:500px ;
+    height: 100px;
+    font-size: 18px;
+    padding: 5px;
+  
+  }
+  
+  .campo{
+    margin-top: 20px;
+  }
+  
+  .submit{
+    width: 80px;
+    background:#633f34;
+    color: white;
+    margin-top: 10px;
+  
+  }
+  .email-redes{
+    width: 50%;
+  }
+  
+  
+  #horario{
+    float: right;
+    width: 50%;
+    margin-top: 120px;
+    margin-left: 100px;
+  }
+  
+  #horario h3{
+    color: #633f34;
+    margin-left: 100px;
+    
+  }
+  #horario p{
+    color: black;
+    margin-left: 100px;
+  }
+  
+  
+  #endereco{
+    font-size: 16px;
+    color: black;
+    margin-left: 100px;
+    margin-top: 100px;
+  
+  }
+  
+  #map iframe{
+    margin-left:100px;
+    margin-bottom:100px;
+    margin-top: 20px;
+    padding: 5px;
+  }
+  
+
+#rodape h4{
+  padding:30px;
+}
