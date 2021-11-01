@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 // Colocou na sessão o pedido serializado
                 sessionStorage.setItem("pedido", texto)
                 
-                alert("Pedido feito com sucesso!")
+                alert("Itens adicionados ao seu pedido!")
                 window.location.href = "pedido.html";
             }
             
