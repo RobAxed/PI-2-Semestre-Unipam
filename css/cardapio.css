@@ -83,7 +83,7 @@ section > main.cardapio > div.itens {
 section > main.cardapio > div.itens > div.produto {
   align-items: center;
   background-color: rgb(235, 235, 235);
-  border: 3px #5b8e48 solid;
+  border: 3px #ffffff solid;
   display: flex;
   margin-top: 20px;
   padding: 15px 15px;
@@ -92,7 +92,7 @@ section > main.cardapio > div.itens > div.produto {
 }
 
 section > main.cardapio > div.itens > div.produto.selected {
-  border: 3px #ff0000 solid;
+  border: 3px #5b8e48 solid;
 }
 
 section > main.cardapio > div.itens > div.produto.hidden {
@@ -108,6 +108,10 @@ section > main.cardapio > div.itens > div.produto.hidden {
 section > main.cardapio > div.itens > div.produto.hidden > img {
   max-height: 0px;
   max-width: 0;
+}
+
+section > main.cardapio > div.itens > div.produto > img {
+  max-width: 90px;
 }
 
 section > main.cardapio > div.itens > div.produto > div.info {
